@@ -4,7 +4,7 @@ title: '#4471 · three problems under one ticket'
 owner: support desk
 status: known
 reviewed: 2026-10-29
-signature: 'Adrian Wysocki'
+signature: 'v1.eyJzdWIiOiIxNDAxIiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTMzMTQ1NjQsImV4cCI6MTc5MzQwMDk2NH0.q1-mOkdkOpJVuzktKZ8GljZv7uOamIRnM53iMJEBvD8'
 ---
 
 <script>
