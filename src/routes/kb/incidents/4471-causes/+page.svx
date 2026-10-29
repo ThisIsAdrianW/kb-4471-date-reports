@@ -1,0 +1,42 @@
+---
+layout: runbook
+title: '#4471 · three problems under one ticket'
+owner: support desk
+status: known
+reviewed: 2026-10-29
+signature: 'Adrian Wysocki'
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+#4471 was filed as one bug. It holds three.
+
+<Callout>
+The merge rule matched on subject line, so reports about different causes joined one ticket.
+</Callout>
+
+## The three problems
+
+1. **Parser flips day and month for day-first tenants.** 370 reports. The shared parser reads
+   month first. One fix, in the shared parser.
+2. **booking-v3 form hint shows MM/DD for day-first tenants.** 33 reports, all from the form.
+   A second bug: the hint is wrong, the parser is not the cause. Its own fix.
+3. **One-day move with no swap.** 5 reports, listed in `desk-notes.json`. Not a swap. Needs
+   investigation before a fix.
+
+Four reports have no date to check and are not filed as bugs.
+
+## What was merged
+
+<CauseTable ticket={4471} />
+
+## Why this matters
+
+The merge put causes 1 and 2 under one ticket, so the fix for one looked like the fix for both.
+Split the ticket by cause, then count each cause once.
+
+<RenderStamp {signature} />

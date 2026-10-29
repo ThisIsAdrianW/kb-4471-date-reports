@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>#4471 · three problems under one ticket</title>
+<style>
+  body { font: 16px/1.5 system-ui, sans-serif; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; color: #1a1a1a; }
+  .callout { border-left: 4px solid #c77700; background: #fff6e5; padding: .6rem 1rem; margin: 1rem 0; }
+  .stamp { margin-top: 2rem; font: 0.85rem ui-monospace, monospace; color: #666; }
+  .stamp b { color: #0a6e8a; letter-spacing: .04em; }
+  .meta { color: #666; font-size: .9rem; }
+</style>
+</head>
+<body>
+<p class="meta">Status: known · Owner: support desk · Reviewed: 2026-10-29</p>
+<h1>#4471 · three problems under one ticket</h1>
+
+<p>#4471 was filed as one bug. It holds three.</p>
+
+<div class="callout">The merge rule matched on subject line, so reports about different causes joined one ticket.</div>
+
+<h2>The three problems</h2>
+<ol>
+  <li><strong>Parser flips day and month for day-first tenants.</strong> 370 reports. The shared parser reads month first. One fix, in the shared parser.</li>
+  <li><strong>booking-v3 form hint shows MM/DD for day-first tenants.</strong> 33 reports, all from the form. A second bug: the hint is wrong, the parser is not the cause. Its own fix.</li>
+  <li><strong>One-day move with no swap.</strong> 5 reports, listed in <code>desk-notes.json</code>. Not a swap. Needs investigation before a fix.</li>
+</ol>
+
+<p>Four reports have no date to check and are not filed as bugs.</p>
+
+<h2>What was merged</h2>
+<p><em>Rendered live by the kb: the cause table from <code>reports-4471.json</code> appears here.</em></p>
+
+<h2>Why this matters</h2>
+<p>The merge put causes 1 and 2 under one ticket, so the fix for one looked like the fix for both. Split the ticket by cause, then count each cause once.</p>
+
+<p class="stamp">desk ref <b>DR-QHT9-FEAD</b></p>
+</body>
+</html>
