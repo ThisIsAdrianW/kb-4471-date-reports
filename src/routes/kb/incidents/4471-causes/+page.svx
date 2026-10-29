@@ -21,10 +21,10 @@ The merge rule matched on subject line, so reports about different causes joined
 
 ## The three problems
 
-1. **Parser flips day and month for day-first tenants.** 379 reports, counted as the desk exports them. The shared parser reads
-   month first. One fix, in the shared parser.
+1. **Parser flips day and month for day-first tenants.** 379 reports, counted as the desk exports them. Fixed in `fix(dates): parse dd/mm for eu locales` (closed 05 Oct). The shared parser reads
+   month first.
 2. **booking-v3 form hint shows MM/DD for day-first tenants.** 33 reports, all from the form.
-   A second bug: the hint is wrong, the parser is not the cause. Its own fix.
+   A second bug: the hint is wrong, the parser is not the cause. Won't fix: the booking-v3 form is retired.
 3. **One-day move with no swap.** 5 reports, listed in `desk-notes.json`. Not a swap. Needs
    investigation before a fix.
 

@@ -21,9 +21,9 @@
 
 <h2>The three problems</h2>
 <ol>
-  <li><strong>Parser flips day and month for day-first tenants.</strong> 379 reports, counted as the desk exports them. The shared parser reads month first. One fix, in the shared parser.</li>
-  <li><strong>booking-v3 form hint shows MM/DD for day-first tenants.</strong> 33 reports, all from the form. A second bug: the hint is wrong, the parser is not the cause. Its own fix.</li>
-  <li><strong>One-day move with no swap.</strong> 5 reports, listed in <code>desk-notes.json</code>. Not a swap. Needs investigation before a fix.</li>
+  <li><strong>Parser flips day and month for day-first tenants.</strong> 379 reports, counted as the desk exports them. Fixed in <code>fix(dates): parse dd/mm for eu locales</code> (closed 05 Oct). The shared parser reads month first.</li>
+  <li><strong>booking-v3 form hint shows MM/DD for day-first tenants.</strong> 33 reports, all from the form. A second bug: the hint is wrong, the parser is not the cause. Won't fix: the booking-v3 form is retired.</li>
+  <li><strong>One-day move with no swap.</strong> 5 reports, listed in <code>desk-notes.json</code>. Not a swap. Not covered by the desk update; still open.</li>
 </ol>
 
 <p>The 379 include 5 one-day moves (third problem) and 4 reports with no date to check.</p>
